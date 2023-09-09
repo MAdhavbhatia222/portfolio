@@ -6,12 +6,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = "A user with email: " . $email . " has signed up.";
 
     // Send the email
-    mail($to, $subject, $message);
+    if (mail($to, $subject, $message)) {
+        // Email sent successfully
+        echo "Thank you for signing up!"; // You can customize this message
+    } else {
+        // Email sending failed
+        echo "Oops! There was a problem signing you up. Please try again later.";
+    }
 
     // Optionally, you can save the email to a database for further use.
     // You should implement database storage securely.
 }
-
-// Redirect back to the homepage or a thank-you page.
-header("Location: index.html"); // Change the URL as needed.
 ?>
