@@ -52,9 +52,7 @@
             text-align: center;
             padding: 20px;
             background-color: #f2f2f2;
-        }
-
-        blockquote {
+            color: #333; /* Set testimony text color to dark */
             font-style: italic;
         }
 
@@ -133,48 +131,4 @@
     <div id="emailModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
-            <p id="modalMessage">Enter your email to access content.</p>
-            <input type="email" id="modalEmail" placeholder="Enter your email">
-            <button onclick="closeModal(); showMessage('Thank you for signing up!')">Sign Up</button>
-        </div>
-    </div>
-
-    <script>
-        function showPopup(type) {
-            var modal = document.getElementById('emailModal');
-            var modalMessage = document.getElementById('modalMessage');
-            var modalEmail = document.getElementById('modalEmail');
-
-            switch (type) {
-                case 'ideas':
-                    modalMessage.textContent = 'Enter your email to access Ideas';
-                    break;
-                case 'mentors':
-                    modalMessage.textContent = 'Enter your email to access Mentors';
-                    break;
-                case 'investment':
-                    modalMessage.textContent = 'Enter your email to access Investment';
-                    break;
-                case 'hire':
-                    modalMessage.textContent = 'Enter your email to access Hire';
-                    break;
-                case 'signup':
-                    modalMessage.textContent = 'Enter your email to sign up!';
-                    break;
-            }
-
-            modal.style.display = 'block';
-            modalEmail.focus();
-        }
-
-        function closeModal() {
-            var modal = document.getElementById('emailModal');
-            modal.style.display = 'none';
-        }
-
-        function showMessage(message) {
-            alert(message);
-        }
-    </script>
-</body>
-</html>
+            <p id
