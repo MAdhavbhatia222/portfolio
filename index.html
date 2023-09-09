@@ -1,10 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website</title>
     <style>
-        /* Add your CSS styles here */
-        /* Style the buttons, logo, and text box as needed */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #header {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        button {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #signup {
+            text-align: center;
+            padding: 20px;
+        }
+
+        input[type="email"] {
+            padding: 10px;
+            width: 80%;
+        }
+
+        #testimonial {
+            text-align: center;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        blockquote {
+            font-style: italic;
+        }
+
+        /* Styling for the modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            background-color: white;
+            max-width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -31,29 +106,53 @@
         </blockquote>
     </div>
 
+    <!-- Modal for email sign-up -->
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modalMessage">Enter your email to access content.</p>
+            <input type="email" id="modalEmail" placeholder="Enter your email">
+            <button onclick="closeModal(); showMessage('Thank you for signing up!')">Sign Up</button>
+        </div>
+    </div>
+
     <script>
-        // JavaScript for showing popups
         function showPopup(type) {
-            var popupMessage = '';
+            var modal = document.getElementById('emailModal');
+            var modalMessage = document.getElementById('modalMessage');
+            var modalEmail = document.getElementById('modalEmail');
+
             switch (type) {
                 case 'ideas':
-                    popupMessage = 'Enter your email to access Ideas';
+                    modalMessage.textContent = 'Enter your email to access Ideas';
                     break;
                 case 'mentors':
-                    popupMessage = 'Enter your email to access Mentors';
+                    modalMessage.textContent = 'Enter your email to access Mentors';
                     break;
                 case 'investment':
-                    popupMessage = 'Enter your email to access Investment';
+                    modalMessage.textContent = 'Enter your email to access Investment';
                     break;
                 case 'hire':
-                    popupMessage = 'Enter your email to access Hire';
+                    modalMessage.textContent = 'Enter your email to access Hire';
                     break;
                 case 'signup':
-                    popupMessage = 'Thank you for signing up!';
+                    modalMessage.textContent = 'Enter your email to sign up!';
                     break;
             }
-            alert(popupMessage);
+
+            modal.style.display = 'block';
+            modalEmail.focus();
+        }
+
+        function closeModal() {
+            var modal = document.getElementById('emailModal');
+            modal.style.display = 'none';
+        }
+
+        function showMessage(message) {
+            alert(message);
         }
     </script>
 </body>
 </html>
+b
