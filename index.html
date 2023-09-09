@@ -1,225 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css" />
-    <title>Madhav Bhatia</title>
-  </head>
-  <body class="light" id="top">
-    <header class="header center">
-      <h3>
-        <a href="https://www.linkedin.com/in/madhavbhatia/" class="link"
-          >MB.</a
-        >
-      </h3>
-
-      <nav class="nav center">
-        <ul class="nav__list center">
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#projects">Projects</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#skills">Skills</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#contact">Contact</a>
-          </li>
-        </ul>
-
-        <button type="button" aria-label="toggle theme" class="btn btn--icon">
-          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
-        </button>
-
-        <button
-          type="button"
-          aria-label="toggle navigation"
-          class="btn btn--icon nav__hamburger"
-        >
-          <i aria-hidden="true" class="fas fa-bars"></i>
-        </button>
-      </nav>
-    </header>
-
-    <main>
-      <!-- About -->
-      <div class="about center">
-        <h1>Hi, I am <a href="https://www.linkedin.com/in/madhavbhatia/" target="_blank" class="about__name">Madhav Bhatia</a>.</h1>
-        <h2 class="about__role">Product Analyst.</h2>
-        <p class="about__desc">
-          From analyzing user navigation and search engine results at LatentView Analytics,
-          to improving consumer experience and occupancy rates at OYO, 
-          my journey in data analytics has been marked by growth, insights, and innovation. 
-          Currently, my focus is on using data to optimize product experiences, 
-          a passion kindled by hands-on work with data tools like SQL, Python, and Google Analytics.
-
-          Looking ahead, I'm eager to explore new challenges, apply my adaptability, and utilize my robust analytical skillset. 
-          To me, data isn’t just numbers or code—it's the key to unlocking efficiency, innovation, and the next big breakthrough.
-
-          My unique combination of skills in product analytics, A/B testing, ETL and data pipeline construction, and machine learning, 
-          empowers me to deliver valuable insights, drive impactful decisions, and contribute effectively to any organization's success. 
-          Let's redefine what a Data Analyst can do together!
-        </p>
-
-        <div class="about__contact center">
-          <a href="https://drive.google.com/file/d/1O35hlBThhwtWkPyC_rTe9AEuePxitwx6/view?usp=sharing">
-            <span class="btn btn--outline">Resume</span>
-          </a>
-
-          <a
-            href="https://github.com/MAdhavbhatia222"
-            aria-label="github"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-
-          <a
-            href="https://linkedin.com/in/madhavbhatia"
-            aria-label="linkedin"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-linkedin"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Projects -->
-<section id="projects" class="section projects">
-  <h2 class="section__title">Projects</h2>
-
-  <div class="projects__grid">
-    <!-- Project 1 -->
-    <div class="project">
-      <a href="https://github.com/MAdhavbhatia222/SQL_Projects/blob/main/Credit_Card_Usage" target="_blank">
-        <h3>Explore Credit Card Data</h3>
-        <p class="project__description">
-          In this project, I used Structured Query Language (SQL) to analyze the Credit Card Data, which contains information about credit card type and expenditure. I used SQL commands, including joins and aggregate functions, to answer various questions about the data.
-        </p>
-        <ul class="project__stack">
-          <li class="project__stack-item">SQL</li>
-          <li class="project__stack-item">Joins</li>
-          <li class="project__stack-item">Aggregate Functions</li>
-        </ul>
-        <a
-          href="https://github.com/MAdhavbhatia222/SQL_Projects/blob/main/Credit_Card_Usage"
-          aria-label="source code"
-          class="link link--icon"
-        >
-          <i aria-hidden="true" class="fab fa-github"></i>
-        </a>
-      </a>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="project">
-      <a href="https://github.com/MAdhavbhatia222/SQL_Projects/blob/main/Olympic_Data_Exploration" target="_blank">
-        <h3>Olympic Data Exploration</h3>
-        <p class="project__description">
-          In this project, I used Structured Query Language (SQL) to analyze the Olympic Data, which contains information about all the players who participated in the Olympics and all the events over the years. I used SQL commands, including joins and aggregate functions, to answer various questions about the data.
-        </p>
-        <ul class="project__stack">
-          <li class="project__stack-item">SQL</li>
-          <li class="project__stack-item">Joins</li>
-          <li class="project__stack-item">Aggregate Functions</li>
-        </ul>
-        <a
-          href="https://github.com/MAdhavbhatia222/SQL_Projects/blob/main/Olympic_Data_Exploration"
-          aria-label="source code"
-          class="link link--icon"
-        >
-          <i aria-hidden="true" class="fab fa-github"></i>
-        </a>
-      </a>
-    </div>
-
-    <!-- New Project - LinkedIn Data Analysis -->
-    <div class="project">
-      <a href="https://github.com/MAdhavbhatia222/Linkedin_Scrap_Py/tree/main" target="_blank">
-        <h3>LinkedIn Data Analysis</h3>
-        <p class="project__description">
-          In this project, I used Python to extract and analyze data about product analyst jobs on LinkedIn. I used this data to improve my LinkedIn Skills section and my resume. I used selenium, BeautifulSoup, matplotlib, and nltk to gather, clean, and extract data.
-        </p>
-        <ul class="project__stack">
-          <li class="project__stack-item">Python</li>
-          <li class="project__stack-item">Selenium</li>
-          <li class="project__stack-item">BeautifulSoup</li>
-          <li class="project__stack-item">Matplotlib</li>
-          <li class="project__stack-item">NLTK</li>
-        </ul>
-        <a
-          href="https://github.com/MAdhavbhatia222/Linkedin_Scrap_Py/tree/main"
-          aria-label="source code"
-          class="link link--icon"
-        >
-          <i aria-hidden="true" class="fab fa-github"></i>
-        </a>
-      </a>
+<html>
+<head>
+    <title>Your Website</title>
+    <style>
+        /* Add your CSS styles here */
+        /* Style the buttons, logo, and text box as needed */
+    </style>
+</head>
+<body>
+    <div id="header">
+        <button onclick="showPopup('ideas')">Ideas</button>
+        <button onclick="showPopup('mentors')">Mentors</button>
+        <button onclick="showPopup('investment')">Investment</button>
+        <button onclick="showPopup('hire')">Hire</button>
     </div>
     
-    <!-- New Project - Tableau Project -->
-    <div class="project">
-      <a href="https://public.tableau.com/views/Airbnb_Rooms_Avg_Price/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link" target="_blank">
-        <h3>Tableau Project: Airbnb Seattle Data Analysis</h3>
-        <p class="project__description">
-          In this project, I used Kaggle data of Airbnb Seattle to get listing-based data. The dashboard contains visualizations related to average price, bedroom listings, and revenue.
-        </p>
-        <ul class="project__stack">
-          <li class="project__stack-item">Tableau</li>
-          <li class="project__stack-item">Data Visualization</li>
-          <li class="project__stack-item">Analytics</li>
-        </ul>
-      </a>
+    <div id="content">
+        <img src="your-logo.png" alt="Your Logo" />
+        <p>Your pitch content goes here.</p>
     </div>
-  </div>
-</section>
-
-
-
-      <!-- Skills -->
-      <section class="section skills" id="skills">
-        <h2 class="section__title">Skills</h2>
-        <ul class="skills__list">
-          <li class="skills__list-item btn btn--plain">Statistics: Regression Models (Linear, Multilinear, Logistic), Decision Tree, Hypothesis Testing</li>
-          <li class="skills__list-item btn btn--plain">Analytical Tools: Tableau, MS Excel, MS PowerPoint, MS Word</li>
-          <li class="skills__list-item btn btn--plain">Agile Methodologies: Certified ScrumMaster® (CSM®), Agile Project Management</li>
-          <li class="skills__list-item btn btn--plain">Databases: MySQL, BigQuery, Azure DataWarehouse</li>
-          <li class="skills__list-item btn btn--plain">Languages: Python (NumPy, Pandas, Scikit-learn), SQL, R, VBA</li>
-        </ul>
-      </section>
-
-      <!-- Contact -->
-      <section class="section contact center" id="contact">
-        <h2 class="section__title">Contact</h2>
-        <a href="mailto:madhavbh@buffalo.edu">
-          <span class="btn btn--outline">Email me</span>
-        </a>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <a
-        href="https://github.com/rajshekhar26/cleanfolio-minimal"
-        class="link footer__link"
-      >
-        Created By Madhav Bhatia
-      </a>
-    </footer>
-
-    <div class="scroll-container">
-    <div class="scroll-top">
-      <a aria-label="Scroll up" href="#top">
-        <i aria-hidden="true" class="fas fa-arrow-up"></i>
-      </a>
+    
+    <div id="signup">
+        <input type="email" id="email" placeholder="Enter your email">
+        <button onclick="showPopup('signup')">Sign Up</button>
     </div>
+    
+    <div id="testimonial">
+        <blockquote>
+            "Your testimonial quote goes here."
+        </blockquote>
     </div>
 
-    <script src="./script.js"></script>
-  </body>
+    <script>
+        // JavaScript for showing popups
+        function showPopup(type) {
+            var popupMessage = '';
+            switch (type) {
+                case 'ideas':
+                    popupMessage = 'Enter your email to access Ideas';
+                    break;
+                case 'mentors':
+                    popupMessage = 'Enter your email to access Mentors';
+                    break;
+                case 'investment':
+                    popupMessage = 'Enter your email to access Investment';
+                    break;
+                case 'hire':
+                    popupMessage = 'Enter your email to access Hire';
+                    break;
+                case 'signup':
+                    popupMessage = 'Thank you for signing up!';
+                    break;
+            }
+            alert(popupMessage);
+        }
+    </script>
+</body>
 </html>
