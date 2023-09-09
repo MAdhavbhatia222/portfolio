@@ -108,8 +108,10 @@
     </div>
     
     <div id="signup">
-        <input type="email" id="email" placeholder="Enter your email">
-        <button onclick="showPopup('signup')">Sign Up</button>
+        <form method="post" action="signup.php">
+            <input type="email" name="email" id="email" placeholder="Enter your email">
+            <button type="submit" onclick="showPopup('signup')">Sign Up</button>
+        </form>
     </div>
     
     <div id="testimonial">
