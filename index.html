@@ -134,21 +134,57 @@
     </div>
     
     <div id="signup">
-        <h2>Find your perfect advisor now!</h2>
-        <form id="advisorForm">
-            <input type="text" name="companyName" placeholder="Your Company Name">
-            <input type="email" name="email" placeholder="Email Address">
-            <select name="industry">
-                <option value="" disabled selected>Select Your Industry</option>
-                <option value="tech">Tech</option>
-                <option value="health">Health</option>
-                <option value="finance">Finance</option>
-                <!-- Add more options -->
-            </select>
-            <textarea name="description" rows="4" placeholder="Briefly describe your startup"></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+    <h2>Find your perfect advisor now!</h2>
+    <form id="advisorForm">
+        <!-- Basic Info -->
+        <input type="text" name="companyName" placeholder="Your Company Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="text" name="founderName" placeholder="Founder's Name" required>
+
+        <!-- Industry Selection -->
+        <select name="industry" required>
+            <option value="" disabled selected>Select Your Industry</option>
+            <option value="tech">Tech</option>
+            <option value="health">Health</option>
+            <option value="finance">Finance</option>
+            <!-- Add more options -->
+        </select>
+
+        <!-- Funding Status -->
+        <select name="fundingStatus" required>
+            <option value="" disabled selected>Your Funding Status</option>
+            <option value="bootstrapping">Bootstrapping</option>
+            <option value="seed">Seed Funding</option>
+            <option value="seriesA">Series A</option>
+            <option value="seriesB">Series B+</option>
+        </select>
+
+        <!-- Team Size -->
+        <select name="teamSize" required>
+            <option value="" disabled selected>Your Team Size</option>
+            <option value="1">Solo</option>
+            <option value="2-5">2-5</option>
+            <option value="6-10">6-10</option>
+            <option value="11+">11+</option>
+        </select>
+
+        <!-- Current Challenges -->
+        <select name="currentChallenges" multiple required>
+            <option value="" disabled selected>Select Your Current Challenges</option>
+            <option value="scaling">Scaling</option>
+            <option value="funding">Funding</option>
+            <option value="productDev">Product Development</option>
+            <option value="marketing">Marketing</option>
+            <option value="other">Other</option>
+        </select>
+
+        <!-- Additional Info -->
+        <textarea name="description" rows="4" placeholder="Briefly describe your startup" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
 
     <div id="testimonial">
         <blockquote>
