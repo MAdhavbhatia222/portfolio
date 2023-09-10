@@ -5,55 +5,215 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infinit-I</title>
     <style>
-        /* Your existing styles go here */
+        /* Existing and enhanced styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(to right, #222, #333);
+            color: #fff;
+        }
+
+        #header {
+            display: flex;
+            justify-content: space-between;
+            background: linear-gradient(to bottom, #333, #444);
+            padding: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            background: #fff;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #content {
+            text-align: center;
+            padding: 50px;
+            margin-top: 30px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: rgba(255, 255, 255, 0.1);
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        #signup {
+            text-align: center;
+            background: #f9f9f9;
+            color: #333;
+            padding: 50px;
+            border-radius: 5px;
+        }
+
+        form input, form select, form button {
+            margin-top: 20px;
+            padding: 10px;
+            width: 80%;
+            border: none;
+            border-radius: 5px;
+        }
+
+        form button {
+            background: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #testimonial {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            color: #f9f9f9;
+        }
+
+        /* Existing modal & media query styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            background-color: white;
+            max-width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            #header {
+                flex-direction: column;
+                align-items: center;
+            }
+            button {
+                margin: 5px;
+            }
+        }
     </style>
 </head>
 <body>
     <div id="header">
-        <!-- Existing buttons here -->
+        <button onclick="showPopup('ideas')">Ideas</button>
+        <button onclick="showPopup('mentors')">Mentors</button>
+        <button onclick="showPopup('investment')">Investment</button>
+        <button onclick="showPopup('hire')">Hire</button>
     </div>
 
     <div id="content">
         <img src="Infinit-I Logo.png" alt="Infinit-I Logo" />
-        <p>Welcome to Infinit-I, where we believe that every startup has untapped potential waiting to be unleashed.</p>
-        <p>Struggling to find the right advisors for your startup? Our platform uses AI and analytics to match you with proven industry experts.</p>
+        <p>Hello, we are Infinit-I. We make every innovation possible. Are you a start-up and struggling with getting your business off the ground?</p>
+        <p>At Infinit-I, we provide a one-stop solution for all services required to make your innovation successful:</p>
         <ul>
-            <li>Get matched with advisors who have a proven track record in your industry</li>
-            <li>Save time and resources by letting our algorithm find the best matches</li>
-            <li>Benefit from our realistic target of capturing 1% of the 50,000 annually funded startups in the US</li>
+            <li>Connect you to mentors</li>
+            <li>Attract investors</li>
+            <li>Provide service partners at an affordable price with target skills</li>
         </ul>
     </div>
-
+    
     <div id="signup">
-        <h2>Ready to Find Your Perfect Advisor?</h2>
-        <form id="questionnaire">
-            <label for="industry">Industry:</label>
-            <input type="text" id="industry" name="industry" required><br>
-            
-            <label for="startup-stage">Startup Stage:</label>
-            <select id="startup-stage" name="startup-stage">
-                <option value="idea">Idea</option>
-                <option value="development">Development</option>
-                <option value="launch">Launch</option>
-            </select><br>
-            
-            <label for="investment-needed">Investment Needed:</label>
-            <input type="checkbox" id="investment-needed" name="investment-needed"><br>
-            
-            <label for="advisor-area">Advisor Area of Expertise Needed:</label>
-            <input type="text" id="advisor-area" name="advisor-area" required><br>
-
+        <h2>Find your perfect advisor now!</h2>
+        <form id="advisorForm">
+            <input type="text" name="companyName" placeholder="Your Company Name">
+            <input type="email" name="email" placeholder="Email Address">
+            <select name="industry">
+                <option value="" disabled selected>Select Your Industry</option>
+                <option value="tech">Tech</option>
+                <option value="health">Health</option>
+                <option value="finance">Finance</option>
+                <!-- Add more options -->
+            </select>
+            <textarea name="description" rows="4" placeholder="Briefly describe your startup"></textarea>
             <button type="submit">Submit</button>
         </form>
     </div>
 
     <div id="testimonial">
-        <!-- Existing testimonial -->
+        <blockquote>
+            "Infinit-I has truly been our saving grace, rescuing us from a state of confusion and empowering us to connect with the world. - Anonymous"
+        </blockquote>
     </div>
 
-    <!-- Existing Modal code -->
+    <!-- Existing Modals -->
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modalMessage">Enter your email to access content.</p>
+            <input type="email" id="modalEmail" placeholder="Try it Now!">
+            <button onclick="closeModal(); showSignUpMessage()">Sign Up</button>
+        </div>
+    </div>
+
     <script>
-        // Your existing JavaScript code
+        // Existing JavaScript code for modals and signup
+        function showPopup(type) {
+            var modal = document.getElementById('emailModal');
+            var modalMessage = document.getElementById('modalMessage');
+            var modalEmail = document.getElementById('modalEmail');
+
+            switch (type) {
+                case 'ideas':
+                    modalMessage.textContent = 'Enter your email to access Ideas';
+                    break;
+                case 'mentors':
+                    modalMessage.textContent = 'Enter your email to access Mentors';
+                    break;
+                case 'investment':
+                    modalMessage.textContent = 'Enter your email to access Investment';
+                    break;
+                case 'hire':
+                    modalMessage.textContent = 'Enter your email to access Hire';
+                    break;
+                case 'signup':
+                    modalMessage.textContent = 'Enter your email to sign up!';
+                    break;
+            }
+
+            modal.style.display = 'block';
+            modalEmail.focus();
+        }
+
+        function closeModal() {
+            var modal = document.getElementById('emailModal');
+            modal.style.display = 'none';
+        }
+
+        function showSignUpMessage() {
+            var signupForm = document.getElementById('signupForm');
+            var signupMessage = document.getElementById('signupMessage');
+
+            signupForm.style.display = 'none';
+            signupMessage.style.display = 'block';
+        }
     </script>
 </body>
 </html>
