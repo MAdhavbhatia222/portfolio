@@ -1,248 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infinit-I</title>
-    <style>
-        /* Existing and enhanced styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: linear-gradient(to right, #222, #333);
-            color: #fff;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio" />
 
-        #header {
-            display: flex;
-            justify-content: space-between;
-            background: linear-gradient(to bottom, #333, #444);
-            padding: 20px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Madhav Bhatia</title>
+  </head>
+  <body class="light" id="top">
+    <header class="header center">
+      <h3>
+        <a href="https://www.linkedin.com/in/madhavbhatia/" class="link"
+          >MB.</a
+        >
+      </h3>
 
-        button {
-            background: #fff;
-            color: #333;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        #content {
-            text-align: center;
-            padding: 50px;
-            margin-top: 30px;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul li {
-            background: rgba(255, 255, 255, 0.1);
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 5px;
-        }
-
-        #signup {
-            text-align: center;
-            background: #f9f9f9;
-            color: #333;
-            padding: 50px;
-            border-radius: 5px;
-        }
-
-        form input, form select, form button {
-            margin-top: 20px;
-            padding: 10px;
-            width: 80%;
-            border: none;
-            border-radius: 5px;
-        }
-
-        form button {
-            background: #333;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        #testimonial {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 50px;
-            color: #f9f9f9;
-        }
-
-        /* Existing modal & media query styling */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-
-        .modal-content {
-            background-color: white;
-            max-width: 300px;
-            margin: 100px auto;
-            padding: 20px;
-            text-align: center;
-            border-radius: 5px;
-        }
-
-        .close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-        }
-
-        @media (max-width: 600px) {
-            #header {
-                flex-direction: column;
-                align-items: center;
-            }
-            button {
-                margin: 5px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div id="content">
-        <img src="Infinit-I Logo.png" alt="Infinit-I Logo" />
-        <p>Hello, we are Infinit-I. We make every innovation possible. Are you a start-up and struggling with getting your business off the ground?</p>
-        <p>At Infinit-I, we provide a one-stop solution for all services required to make your innovation successful:</p>
-        <ul>
-            <li>Connect you to mentors</li>
-            <li>Attract investors</li>
-            <li>Provide service partners at an affordable price with target skills</li>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#projects">Projects</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#skills">Skills</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#contact">Contact</a>
+          </li>
         </ul>
+
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+
+        <button
+          type="button"
+          aria-label="toggle navigation"
+          class="btn btn--icon nav__hamburger"
+        >
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- About -->
+      <div class="about center">
+        <h1>Hi, I am <a href="https://www.linkedin.com/in/madhavbhatia/" target="_blank" class="about__name">Madhav Bhatia</a>.</h1>
+        <h2 class="about__role">Product Analyst.</h2>
+        <p class="about__desc">
+          From analyzing user navigation and search engine results at LatentView Analytics,
+          to improving consumer experience and occupancy rates at OYO, 
+          my journey in data analytics has been marked by growth, insights, and innovation. 
+          Currently, my focus is on using data to optimize product experiences, 
+          a passion kindled by hands-on work with data tools like SQL, Python, and Google Analytics.
+
+          Looking ahead, I'm eager to explore new challenges, apply my adaptability, and utilize my robust analytical skillset. 
+          To me, data isn’t just numbers or code—it's the key to unlocking efficiency, innovation, and the next big breakthrough.
+
+          My unique combination of skills in product analytics, A/B testing, ETL and data pipeline construction, and machine learning, 
+          empowers me to deliver valuable insights, drive impactful decisions, and contribute effectively to any organization's success. 
+          Let's redefine what a Data Analyst can do together!
+        </p>
+
+        <div class="about__contact center">
+          <a href="https://drive.google.com/file/d/1O35hlBThhwtWkPyC_rTe9AEuePxitwx6/view?usp=sharing">
+            <span class="btn btn--outline">Resume</span>
+          </a>
+
+          <a
+            href="https://github.com/MAdhavbhatia222"
+            aria-label="github"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+
+          <a
+            href="https://linkedin.com/in/madhavbhatia"
+            aria-label="linkedin"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+
+     <!-- Projects -->
+<section id="projects" class="section projects">
+  <h2 class="section__title">Projects</h2>
+
+  <div class="projects__grid">
+    <!-- Project 1 -->
+    <div class="project">
+      <a href="https://github.com/MAdhavbhatia222/SQL_Projects/blob/main/Credit_Card_Usage" target="_blank">
+        <h3>SQL: Explore Credit Card Data</h3>
+        <p class="project__description">
+          In this project, I used Structured Query Language (SQL) to analyze the Credit Card Data, which contains information about credit card type and expenditure. I used SQL commands, including joins and aggregate functions, to answer various questions about the data.
+        </p>
+        <ul class="project__stack">
+          <li class="project__stack-item">SQL</li>
+          <li class="project__stack-item">Joins</li>
+          <li class="project__stack-item">Aggregate Functions</li>
+        </ul>
+        <a
+          href="https://github.com/MAdhavbhatia222/SQL_Projects/blob/main/Credit_Card_Usage"
+          aria-label="source code"
+          class="link link--icon"
+        >
+          <i aria-hidden="true" class="fab fa-github"></i>
+        </a>
+      </a>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project">
+      <a href="https://github.com/MAdhavbhatia222/SQL_Projects/blob/main/Olympic_Data_Exploration" target="_blank">
+        <h3>SQL: Olympic Data Exploration</h3>
+        <p class="project__description">
+          In this project, I used Structured Query Language (SQL) to analyze the Olympic Data, which contains information about all the players who participated in the Olympics and all the events over the years. I used SQL commands, including joins and aggregate functions, to answer various questions about the data.
+        </p>
+        <ul class="project__stack">
+          <li class="project__stack-item">SQL</li>
+          <li class="project__stack-item">Joins</li>
+          <li class="project__stack-item">Aggregate Functions</li>
+        </ul>
+        <a
+          href="https://github.com/MAdhavbhatia222/SQL_Projects/blob/main/Olympic_Data_Exploration"
+          aria-label="source code"
+          class="link link--icon"
+        >
+          <i aria-hidden="true" class="fab fa-github"></i>
+        </a>
+      </a>
+    </div>
+
+    <!-- Project 3-->
+    <div class="project">
+      <a href="https://github.com/MAdhavbhatia222/Linkedin_Scrap_Py/tree/main" target="_blank">
+        <h3>Python: LinkedIn Data Analysis</h3>
+         <p class="project__description">
+           In this project, I used Python to extract and analyze data about product analyst jobs on LinkedIn. I used this data to improve my LinkedIn Skills section and my resume. I used selenium, BeautifulSoup, matplotlib, pandas, and nltk to  extract, gather, clean, and visualize data.
+         </p>
+         <ul class="project__stack">
+           <li class="project__stack-item">Python</li>
+           <li class="project__stack-item">Selenium</li>
+           <li class="project__stack-item">BeautifulSoup</li>
+           <li class="project__stack-item">Matplotlib</li>
+          <li class="project__stack-item">Pandas</li>
+          <li class="project__stack-item">Numpy</li>
+           <li class="project__stack-item">NLTK</li>
+        </ul>
+        <a
+          href="https://github.com/MAdhavbhatia222/Linkedin_Scrap_Py/tree/main"
+          aria-label="source code"
+          class="link link--icon"
+        >
+          <i aria-hidden="true" class="fab fa-github"></i>
+        </a>
+      </a>
     </div>
     
-    <div id="signup">
-    <h2>Find your perfect advisor now!</h2>
-    <form id="advisorForm">
-        <!-- Basic Info -->
-        <input type="text" name="companyName" placeholder="Your Company Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
-        <input type="text" name="founderName" placeholder="Founder's Name" required>
-
-        <!-- Industry Selection -->
-        <select name="industry" required>
-            <option value="" disabled selected>Select Your Industry</option>
-            <option value="tech">Tech</option>
-            <option value="health">Health</option>
-            <option value="finance">Finance</option>
-            <!-- Add more options -->
-        </select>
-
-        <!-- Funding Status -->
-        <select name="fundingStatus" required>
-            <option value="" disabled selected>Your Funding Status</option>
-            <option value="bootstrapping">Bootstrapping</option>
-            <option value="seed">Seed Funding</option>
-            <option value="seriesA">Series A</option>
-            <option value="seriesB">Series B+</option>
-        </select>
-
-        <!-- Team Size -->
-        <select name="teamSize" required>
-            <option value="" disabled selected>Your Team Size</option>
-            <option value="1">Solo</option>
-            <option value="2-5">2-5</option>
-            <option value="6-10">6-10</option>
-            <option value="11+">11+</option>
-        </select>
-
-        <!-- Current Challenges -->
-        <select name="currentChallenges" multiple required>
-            <option value="" disabled selected>Select Your Current Challenges</option>
-            <option value="scaling">Scaling</option>
-            <option value="funding">Funding</option>
-            <option value="productDev">Product Development</option>
-            <option value="marketing">Marketing</option>
-            <option value="other">Other</option>
-        </select>
-
-        <!-- Additional Info -->
-        <textarea name="description" rows="4" placeholder="Briefly describe your startup" required></textarea>
-
-        <button type="submit">Submit</button>
-    </form>
-</div>
+    <!-- New Project - Tableau Project -->
+    <div class="project">
+      <a href="https://public.tableau.com/views/Airbnb_Rooms_Avg_Price/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link" target="_blank">
+        <h3>Tableau Project: Airbnb Seattle Data Analysis</h3>
+        <p class="project__description">
+          In this project, I used Kaggle data of Airbnb Seattle to get listing-based data. The dashboard contains visualizations related to average price, bedroom listings, and revenue.
+        </p>
+        <ul class="project__stack">
+          <li class="project__stack-item">Tableau</li>
+          <li class="project__stack-item">Data Visualization</li>
+          <li class="project__stack-item">Analytics</li>
+        </ul>
+      </a>
+    </div>
+  </div>
+</section>
 
 
-    <div id="testimonial">
-        <blockquote>
-            "Infinit-I has truly been our saving grace, rescuing us from a state of confusion and empowering us to connect with the world. - Anonymous"
-        </blockquote>
+      <!-- Skills -->
+      <section class="section skills" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <ul class="skills__list">
+          <li class="skills__list-item btn btn--plain">Statistics: Regression Models (Linear, Multilinear, Logistic), Decision Tree, Hypothesis Testing</li>
+          <li class="skills__list-item btn btn--plain">Analytical Tools: Tableau, MS Excel, MS PowerPoint, MS Word</li>
+          <li class="skills__list-item btn btn--plain">Agile Methodologies: Certified ScrumMaster® (CSM®), Agile Project Management</li>
+          <li class="skills__list-item btn btn--plain">Databases: MySQL, BigQuery, Azure DataWarehouse</li>
+          <li class="skills__list-item btn btn--plain">Languages: Python (NumPy, Pandas, Scikit-learn), SQL, R, VBA</li>
+        </ul>
+      </section>
+
+      <!-- Contact -->
+      <section class="section contact center" id="contact">
+        <h2 class="section__title">Contact</h2>
+        <a href="mailto:madhavbh@buffalo.edu">
+          <span class="btn btn--outline">Email me</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a
+        href="https://github.com/rajshekhar26/cleanfolio-minimal"
+        class="link footer__link"
+      >
+        Created By Madhav Bhatia
+      </a>
+    </footer>
+
+    <div class="scroll-container">
+    <div class="scroll-top">
+      <a aria-label="Scroll up" href="#top">
+        <i aria-hidden="true" class="fas fa-arrow-up"></i>
+      </a>
+    </div>
     </div>
 
-    <!-- Existing Modals -->
-    <div id="emailModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <p id="modalMessage">Enter your email to access content.</p>
-            <input type="email" id="modalEmail" placeholder="Try it Now!">
-            <button onclick="closeModal(); showSignUpMessage()">Sign Up</button>
-        </div>
-    </div>
-
-    <script>
-        // Existing JavaScript code for modals and signup
-        function showPopup(type) {
-            var modal = document.getElementById('emailModal');
-            var modalMessage = document.getElementById('modalMessage');
-            var modalEmail = document.getElementById('modalEmail');
-
-            switch (type) {
-                case 'ideas':
-                    modalMessage.textContent = 'Enter your email to access Ideas';
-                    break;
-                case 'mentors':
-                    modalMessage.textContent = 'Enter your email to access Mentors';
-                    break;
-                case 'investment':
-                    modalMessage.textContent = 'Enter your email to access Investment';
-                    break;
-                case 'hire':
-                    modalMessage.textContent = 'Enter your email to access Hire';
-                    break;
-                case 'signup':
-                    modalMessage.textContent = 'Enter your email to sign up!';
-                    break;
-            }
-
-            modal.style.display = 'block';
-            modalEmail.focus();
-        }
-
-        function closeModal() {
-            var modal = document.getElementById('emailModal');
-            modal.style.display = 'none';
-        }
-
-        function showSignUpMessage() {
-            var signupForm = document.getElementById('signupForm');
-            var signupMessage = document.getElementById('signupMessage');
-
-            signupForm.style.display = 'none';
-            signupMessage.style.display = 'block';
-        }
-    </script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
