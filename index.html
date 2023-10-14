@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Chat Q&A</title>
+    <title>Q&A</title>
 </head>
 <body>
-    <h1>Chat Q&A</h1>
-    <div id="chat-container">
-        <!-- Chat messages will be displayed here -->
-    </div>
-    <input type="text" id="user-input" placeholder="Ask a question...">
-    <button id="send-button">Send</button>
-
-    <script src="app.js"></script>
+    <h1>Q&A</h1>
+    <form id="prompt-form">
+        <label for="prompt">Enter a Prompt:</label>
+        <input type="text" id="prompt" name="prompt">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="response"></div>
+    <script src="script.js"></script>
 </body>
 </html>
