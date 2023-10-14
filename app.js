@@ -1,24 +1,20 @@
-const chatContainer = document.getElementById('chat-container');
-const userInput = document.getElementById('user-input');
-const sendButton = document.getElementById('send-button');
+// app.js
 
-sendButton.addEventListener('click', () => {
-    const userMessage = userInput.value;
-    displayMessage('You', userMessage);
-    userInput.value = ''; // Clear input field
+document.addEventListener('DOMContentLoaded', function () {
+    const iframe = document.getElementById('bing-ai-frame');
 
-    // Send user message to Bing Chat API (implementation required)
-    sendMessageToBingChat(userMessage);
+    iframe.onload = function () {
+        try {
+            const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+            const inputField = innerDoc.querySelector('textarea[id="searchbox"]');
+            const form = innerDoc.getElementById('searchboxform');
+
+            if (inputField && form) {
+                inputField.value = 'Your Query Here'; // Set your prompt here
+                form.submit(); // Submit the form
+            }
+        } catch (error) {
+            console.error('An error occurred while trying to interact with the iframe:', error);
+        }
+    };
 });
-
-function displayMessage(sender, message) {
-    const messageDiv = document.createElement('div');
-    messageDiv.textContent = `${sender}: ${message}`;
-    chatContainer.appendChild(messageDiv);
-}
-
-// Function to send user message to Bing Chat API (implement this)
-function sendMessageToBingChat(message) {
-    // You need to implement this function to send the message to Bing Chat API
-    // and handle the response.
-}
