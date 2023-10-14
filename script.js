@@ -1,11 +1,20 @@
-document.getElementById("prompt-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    const prompt = document.getElementById("prompt").value;
-    fetch(`https://www.bing.com/search?form=MY0291&OCID=MY0291&q=${encodeURIComponent(prompt)}&showconv=1`)
-        .then(response => response.text())
-        .then(data => {
-            const responseDiv = document.getElementById("response");
-            responseDiv.innerHTML = data;
-        })
-        .catch(error => console.error("Error:", error));
+// app.js
+
+document.addEventListener('DOMContentLoaded', function () {
+    const iframe = document.getElementById('bing-ai-frame');
+
+    iframe.onload = function () {
+        try {
+            const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+            const inputField = innerDoc.querySelector('textarea[id="searchbox"]');
+            const form = innerDoc.getElementById('searchboxform');
+
+            if (inputField && form) {
+                inputField.value = 'Your Query Here'; // Set your prompt here
+                form.submit(); // Submit the form
+            }
+        } catch (error) {
+            console.error('An error occurred while trying to interact with the iframe:', error);
+        }
+    };
 });
